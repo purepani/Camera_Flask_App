@@ -1,0 +1,158 @@
+{
+  "fetchPipMetadata": {
+    "sources": {
+      "blinker": {
+        "sha256": "c3f865d4d54db7abc53758a01601cf343fe55b84c1de4e3fa910e420b438d5b9",
+        "type": "url",
+        "url": "https://files.pythonhosted.org/packages/fa/2a/7f3714cbc6356a0efec525ce7a0613d581072ed6eb53eb7b9754f33db807/blinker-1.7.0-py3-none-any.whl",
+        "version": "1.7.0"
+      },
+      "click": {
+        "sha256": "ae74fb96c20a0277a1d615f1e4d73c8414f5a98db8b799a7931d1582f3390c28",
+        "type": "url",
+        "url": "https://files.pythonhosted.org/packages/00/2e/d53fa4befbf2cfa713304affc7ca780ce4fc1fd8710527771b58311a3229/click-8.1.7-py3-none-any.whl",
+        "version": "8.1.7"
+      },
+      "flask": {
+        "sha256": "3232e0e9c850d781933cf0207523d1ece087eb8d87b23777ae38456e2fbe7c6e",
+        "type": "url",
+        "url": "https://files.pythonhosted.org/packages/93/a6/aa98bfe0eb9b8b15d36cdfd03c8ca86a03968a87f27ce224fb4f766acb23/flask-3.0.2-py3-none-any.whl",
+        "version": "3.0.2"
+      },
+      "imageio": {
+        "sha256": "08082bf47ccb54843d9c73fe9fc8f3a88c72452ab676b58aca74f36167e8ccba",
+        "type": "url",
+        "url": "https://files.pythonhosted.org/packages/02/25/66533a8390e3763cf8254dee143dbf8a830391ea60d2762512ba7f9ddfbe/imageio-2.34.0-py3-none-any.whl",
+        "version": "2.34.0"
+      },
+      "itsdangerous": {
+        "sha256": "2c2349112351b88699d8d4b6b075022c0808887cb7ad10069318a8b0bc88db44",
+        "type": "url",
+        "url": "https://files.pythonhosted.org/packages/68/5f/447e04e828f47465eeab35b5d408b7ebaaaee207f48b7136c5a7267a30ae/itsdangerous-2.1.2-py3-none-any.whl",
+        "version": "2.1.2"
+      },
+      "jinja2": {
+        "sha256": "7d6d50dd97d52cbc355597bd845fabfbac3f551e1f99619e39a35ce8c370b5fa",
+        "type": "url",
+        "url": "https://files.pythonhosted.org/packages/30/6d/6de6be2d02603ab56e72997708809e8a5b0fbfee080735109b40a3564843/Jinja2-3.1.3-py3-none-any.whl",
+        "version": "3.1.3"
+      },
+      "lazy-loader": {
+        "sha256": "1e9e76ee8631e264c62ce10006718e80b2cfc74340d17d1031e0f84af7478554",
+        "type": "url",
+        "url": "https://files.pythonhosted.org/packages/a1/c3/65b3814e155836acacf720e5be3b5757130346670ac454fee29d3eda1381/lazy_loader-0.3-py3-none-any.whl",
+        "version": "0.3"
+      },
+      "markupsafe": {
+        "sha256": "b91c037585eba9095565a3556f611e3cbfaa42ca1e865f7b8015fe5c7336d5a5",
+        "type": "url",
+        "url": "https://files.pythonhosted.org/packages/97/18/c30da5e7a0e7f4603abfc6780574131221d9148f323752c2755d48abad30/MarkupSafe-2.1.5-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+        "version": "2.1.5"
+      },
+      "networkx": {
+        "sha256": "f18c69adc97877c42332c170849c96cefa91881c99a7cb3e95b7c659ebdc1ec2",
+        "type": "url",
+        "url": "https://files.pythonhosted.org/packages/d5/f0/8fbc882ca80cf077f1b246c0e3c3465f7f415439bdea6b899f6b19f61f70/networkx-3.2.1-py3-none-any.whl",
+        "version": "3.2.1"
+      },
+      "numpy": {
+        "sha256": "666dbfb6ec68962c033a450943ded891bed2d54e6755e35e5835d63f4f6931d5",
+        "type": "url",
+        "url": "https://files.pythonhosted.org/packages/3a/d0/edc009c27b406c4f9cbc79274d6e46d634d139075492ad055e3d68445925/numpy-1.26.4-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+        "version": "1.26.4"
+      },
+      "opencv-python": {
+        "sha256": "e4088cab82b66a3b37ffc452976b14a3c599269c247895ae9ceb4066d8188a57",
+        "type": "url",
+        "url": "https://files.pythonhosted.org/packages/d9/64/7fdfb9386511cd6805451e012c537073a79a958a58795c4e602e538c388c/opencv_python-4.9.0.80-cp37-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+        "version": "4.9.0.80"
+      },
+      "packaging": {
+        "sha256": "2ddfb553fdf02fb784c234c7ba6ccc288296ceabec964ad2eae3777778130bc5",
+        "type": "url",
+        "url": "https://files.pythonhosted.org/packages/49/df/1fceb2f8900f8639e278b056416d49134fb8d84c5942ffaa01ad34782422/packaging-24.0-py3-none-any.whl",
+        "version": "24.0"
+      },
+      "pillow": {
+        "sha256": "a086c2af425c5f62a65e12fbf385f7c9fcb8f107d0849dba5839461a129cf311",
+        "type": "url",
+        "url": "https://files.pythonhosted.org/packages/66/9c/2e1877630eb298bbfd23f90deeec0a3f682a4163d5ca9f178937de57346c/pillow-10.2.0-cp311-cp311-manylinux_2_28_x86_64.whl",
+        "version": "10.2.0"
+      },
+      "scikit-image": {
+        "sha256": "c5c378db54e61b491b9edeefff87e49fcf7fdf729bb93c777d7a5f15d36f743e",
+        "type": "url",
+        "url": "https://files.pythonhosted.org/packages/d4/34/e27bf2bfe7b52b884b49bd71ea91ff81e4737246735ee5ea383314c31876/scikit_image-0.22.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+        "version": "0.22.0"
+      },
+      "scipy": {
+        "sha256": "8b8066bce124ee5531d12a74b617d9ac0ea59245246410e19bca549656d9a40a",
+        "type": "url",
+        "url": "https://files.pythonhosted.org/packages/d4/b8/7169935f9a2ea9e274ad8c21d6133d492079e6ebc3fc69a915c2375616b0/scipy-1.12.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+        "version": "1.12.0"
+      },
+      "tifffile": {
+        "sha256": "870998f82fbc94ff7c3528884c1b0ae54863504ff51dbebea431ac3fa8fb7c21",
+        "type": "url",
+        "url": "https://files.pythonhosted.org/packages/cd/0b/33610b4d0d1bb83a6bfd20ed838f52e02a44e9b439116cd4f3d424e81a80/tifffile-2024.2.12-py3-none-any.whl",
+        "version": "2024.2.12"
+      },
+      "werkzeug": {
+        "sha256": "90a285dc0e42ad56b34e696398b8122ee4c681833fb35b8334a095d82c56da10",
+        "type": "url",
+        "url": "https://files.pythonhosted.org/packages/c3/fc/254c3e9b5feb89ff5b9076a23218dafbc99c96ac5941e900b71206e6313b/werkzeug-3.0.1-py3-none-any.whl",
+        "version": "3.0.1"
+      }
+    },
+    "targets": {
+      "default": {
+        "blinker": [],
+        "click": [],
+        "flask": [
+          "blinker",
+          "click",
+          "itsdangerous",
+          "jinja2",
+          "werkzeug"
+        ],
+        "imageio": [
+          "numpy",
+          "pillow"
+        ],
+        "itsdangerous": [],
+        "jinja2": [
+          "markupsafe"
+        ],
+        "lazy-loader": [],
+        "markupsafe": [],
+        "networkx": [],
+        "numpy": [],
+        "opencv-python": [
+          "numpy"
+        ],
+        "packaging": [],
+        "pillow": [],
+        "scikit-image": [
+          "imageio",
+          "lazy-loader",
+          "networkx",
+          "numpy",
+          "packaging",
+          "pillow",
+          "scipy",
+          "tifffile"
+        ],
+        "scipy": [
+          "numpy"
+        ],
+        "tifffile": [
+          "numpy"
+        ],
+        "werkzeug": [
+          "markupsafe"
+        ]
+      }
+    }
+  },
+  "invalidationHash": "dd9e2ea96e47259413cc78faf030fa776c544fc3a1b7192055458448a7c3481b"
+}
