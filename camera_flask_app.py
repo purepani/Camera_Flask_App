@@ -9,7 +9,7 @@ import numpy as np
 from flask import Flask, Response, render_template, request
 from skimage.morphology import skeletonize
 
-global capture, rec_frame, grey, switch, neg, face, rec, out
+global capture, rec_frame, original_frame, grey, switch, neg, face, rec, out, out2
 capture = 0
 grey = 0
 red = 0
@@ -27,10 +27,6 @@ except OSError as error:
     pass
 
 # Load pretrained face detection model
-net = cv2.dnn.readNetFromCaffe(
-    "./saved_model/deploy.prototxt.txt",
-    "./saved_model/res10_300x300_ssd_iter_140000.caffemodel",
-)
 
 # instatiate flask app
 app = Flask(__name__, template_folder="./templates")
@@ -39,46 +35,20 @@ app = Flask(__name__, template_folder="./templates")
 camera = cv2.VideoCapture(0)
 
 
-def record(out):
+def record(out, out2):
     global rec_frame
     while rec:
         time.sleep(0.05)
         out.write(rec_frame)
-
-
-def detect_face(frame):
-    global net
-    (h, w) = frame.shape[:2]
-    blob = cv2.dnn.blobFromImage(
-        cv2.resize(frame, (300, 300)), 1.0, (300, 300), (104.0, 177.0, 123.0)
-    )
-    net.setInput(blob)
-    detections = net.forward()
-    confidence = detections[0, 0, 0, 2]
-
-    if confidence < 0.5:
-        return frame
-
-    box = detections[0, 0, 0, 3:7] * np.array([w, h, w, h])
-    (startX, startY, endX, endY) = box.astype("int")
-    try:
-        frame = frame[startY:endY, startX:endX]
-        (h, w) = frame.shape[:2]
-        r = 480 / float(h)
-        dim = (int(w * r), 480)
-        frame = cv2.resize(frame, dim)
-    except Exception as e:
-        pass
-    return frame
+        out2.write(original_frame)
 
 
 def gen_frames():  # generate frame by frame from camera
-    global out, capture, rec_frame
+    global out, capture, rec_frame, original_frame
     while True:
         success, frame = camera.read()
+        original_frame = frame
         if success:
-            if face:
-                frame = detect_face(frame)
             if grey:
                 frame = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
             if red:
@@ -159,11 +129,6 @@ def tasks():
         elif request.form.get("neg") == "Negative":
             global neg
             neg = not neg
-        elif request.form.get("face") == "Face Only":
-            global face
-            face = not face
-            if face:
-                time.sleep(4)
         elif request.form.get("stop") == "Stop/Start":
             if switch == 1:
                 switch = 0
@@ -174,7 +139,7 @@ def tasks():
                 camera = cv2.VideoCapture(0)
                 switch = 1
         elif request.form.get("rec") == "Start/Stop Recording":
-            global rec, out
+            global rec, out, out2
             rec = not rec
             if rec:
                 now = datetime.datetime.now()
@@ -185,11 +150,18 @@ def tasks():
                     20.0,
                     (640, 480),
                 )
+                out2 = cv2.VideoWriter(
+                    "vid_{}_unfiltered.avi".format(str(now).replace(":", "")),
+                    fourcc,
+                    20.0,
+                    (640, 480),
+                )
                 # Start new thread for recording the video
                 thread = Thread(
                     target=record,
                     args=[
                         out,
+                        out2,
                     ],
                 )
                 thread.start()
